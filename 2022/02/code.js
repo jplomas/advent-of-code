@@ -17,7 +17,7 @@ function scoreRound(input) {
     // draw
     playerAScore += 3;
     playerBScore += 3;
-    return [playerAScore, playerBScore]
+    return [playerAScore, playerBScore];
   }
   if (playerAMove === 'A' && playerBMove === 'Y') {
     playerBScore += 6;
@@ -66,7 +66,7 @@ function choose(code) {
     'C W': 'C X',
     'C D': 'C Z',
     'C L': 'C Y'
-  }
+  };
   return possibilities[code];
 }
 
@@ -75,12 +75,12 @@ fs.readFile('input.txt', (err, data) => {
   const games = data.toString().split('\n');
   const scores = games.map(game => scoreRound(game));
   let playerBTotal = 0;
-  scores.forEach(score => { playerBTotal += score[1] });
+  scores.forEach(score => { playerBTotal += score[1]; });
   console.log(`Total for Player 1 in part One: ${playerBTotal}`);
   const outcomes = games.map(game => recode(game));
   const newGames = outcomes.map(outcome => choose(outcome));
   const newScores = newGames.map(game => scoreRound(game));
   let playerBNewTotal = 0;
-  newScores.forEach(score => { playerBNewTotal += score[1] });
+  newScores.forEach(score => { playerBNewTotal += score[1]; });
   console.log(`Total for Player 1 in part Two: ${playerBNewTotal}`);
 });

@@ -1,0 +1,25 @@
+{
+  "name": "advent-of-code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jplomas/advent-of-code.git"
+  },
+  "author": "JP Lomas <jp.lomas@gmail.com> (https://lomas.doctor/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jplomas/advent-of-code/issues"
+  },
+  "homepage": "https://github.com/jplomas/advent-of-code#readme",
+  "devDependencies": {
+    "eslint": "^8.28.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "2.8.0"
+  }
+}
