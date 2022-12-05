@@ -4,7 +4,7 @@ function getStartEndOne(a) {
   const x = a.split('-');
   const start = parseInt(x[0]);
   const end = parseInt(x[1]);
-  return { start, end }
+  return { start, end };
 }
 
 function checkFullOverlap(a, b) {
@@ -13,24 +13,24 @@ function checkFullOverlap(a, b) {
   const y = b.split('-');
   const x = a.split('-');
   if (parseInt(y[0]) >= rangeA.start && parseInt(y[1]) <= rangeA.end) {
-    return true
+    return true;
   }
   if (parseInt(x[0]) >= rangeB.start && parseInt(x[1]) <= rangeB.end) {
-    return true
+    return true;
   }
-  return false
+  return false;
 }
 
 function checkPartialOverlap(a, b) {
   const rangeA = getStartEndOne(a);
   const rangeB = getStartEndOne(b);
   if (rangeA.start < rangeB.start && rangeA.end < rangeB.start) {
-    return false
+    return false;
   }
   if (rangeB.start < rangeA.start && rangeB.end < rangeA.start) {
-    return false
+    return false;
   }
-  return true
+  return true;
 }
 
 fs.readFile('input.txt', (err, data) => {
